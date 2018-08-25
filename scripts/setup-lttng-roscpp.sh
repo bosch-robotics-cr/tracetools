@@ -7,8 +7,8 @@
 
 # set up ust roscpp events
 for event in roscpp:new_connection roscpp:callback_added roscpp:timer_added\
-	roscpp:callback_start roscpp:callback_end\
-	roscpp:publisher_link_handle_message roscpp:subscription_message_queued\
+	roscpp:callback_start roscpp:callback_end roscpp:publisher_link_handle_message\
+	roscpp:subscription_message_queued roscpp:subscription_message_dropped\
 	roscpp:subscriber_callback_start roscpp:subscriber_callback_end\
 	roscpp:publisher_message_queued	roscpp:subscriber_link_message_write\
 	roscpp:subscriber_link_message_drop roscpp:subscriber_callback_added\
