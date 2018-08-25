@@ -12,7 +12,8 @@ for event in roscpp:new_connection roscpp:callback_added roscpp:timer_added\
 	roscpp:subscriber_callback_start roscpp:subscriber_callback_end\
 	roscpp:publisher_message_queued	roscpp:subscriber_link_message_write\
 	roscpp:subscriber_link_message_drop roscpp:subscriber_callback_added\
-	roscpp:subscriber_callback_wrapper roscpp:task_start roscpp:init_node\
+	roscpp:subscriber_callback_wrapper roscpp:task_start\
+	roscpp:init_node roscpp:shutdown_node\
 	nodelet:task_start nodelet:init tf2:task_start roscpp:message_processed\
 	roscpp:trace_link roscpp:ptr_name_info roscpp:ptr_call roscpp:timer_scheduled
 do

@@ -64,6 +64,11 @@ void node_init(const char* node_name, unsigned int roscpp_version) {
 	prctl(PR_SET_NAME, node_name, NULL, NULL, NULL);
 #endif
 }
+void node_shutdown(const char* node_name) {
+#ifdef WITH_LTTNG
+	tracepoint(roscpp, shutdown_node, node_name);
+#endif
+}
 void call_start(const void* ptr_ref, const void* data,
 		const uint64_t trace_id) {
 #ifdef WITH_LTTNG

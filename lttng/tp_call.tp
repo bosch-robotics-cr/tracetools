@@ -11,7 +11,17 @@ TRACEPOINT_EVENT(
 		ctf_string(node_name, node_name_arg)
 		ctf_integer(int, roscpp_version_compiletime, roscpp_version_arg)
 	)
-)		
+)
+TRACEPOINT_EVENT(
+	roscpp,
+	shutdown_node,
+	TP_ARGS(
+		const char*, node_name_arg
+	),
+	TP_FIELDS(
+		ctf_string(node_name, node_name_arg)
+	)
+)
 TRACEPOINT_EVENT(
     roscpp,
     new_connection,

@@ -42,6 +42,8 @@ void task_init(const char *task_name, const char *owner = NULL);
 /// also set's procname, but be aware that's limited to 16 chars
 void node_init(const char *node_name, unsigned int roscpp_version);
 
+void node_shutdown(const char *node_name);
+
 void timer_added(const void *fun_ptr, const char *type_info, int period_sec,
                  int period_nsec);
 /**
